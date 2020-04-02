@@ -1,0 +1,21 @@
+Rpi'de terminale şunu yazdım: sudo nano
+/etc/wpa_supplicant/wpa_supplicant.conf
+
+Açılan dosyaya şunu ekledim: (identity ve password'un karşısındaki tırnak
+içleri doldurulacak. identity e'li olan mail adresiyle doldurulacak)
+
+network={
+        ssid="meturoam"
+        proto=RSN
+        key_mgmt=WPA-EAP
+        pairwise=CCMP
+        auth_alg=OPEN
+        eap=PEAP
+        identity=""
+        anonymous_identity="anonymous@metu.edu.tr"
+        password=""
+        phase1="peaplabel=0"
+        phase2="auth=MSCHAPV2"
+        priority=1
+        disabled=0
+}
